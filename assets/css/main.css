@@ -4,6 +4,8 @@ html {
     scroll-behavior: smooth;
   }
 
+  
+
 html, body {
     overflow-x: hidden;
   }
@@ -25,7 +27,7 @@ html, body {
   }
 
   p a:hover {
-    text-shadow: 1px 1px 2px lightgreen;  
+    text-shadow: 1px 1px 2px rgba(0, 100, 0, 0.306);  
   }
 
   .nav-tab {
@@ -46,7 +48,6 @@ html, body {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    font-family: 'Helvetica Neue';
     margin-top: 90px;
     margin-bottom: 62px;
   }
@@ -233,6 +234,15 @@ h1 {
     margin-bottom: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
+    border: 1px solid #be950c;
+    /* Multiple shadows create a sense of depth */
+    box-shadow: 
+      /* Subtle outer glow */
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      /* A stronger shadow on one side for directionality */
+      4px 4px 10px rgba(0, 0, 0, 0.3),
+      /* Optional: subtle inner shadow */
+      inset 0 0 5px #be950c
 }
 
 .hero_container {
@@ -326,7 +336,10 @@ h2 {
   background: white;
 }
 
-
+#button1 {
+  background-color: #FFFFFF;
+  color: #000;
+}
 
 .button {
     display: inline-block;
@@ -396,18 +409,36 @@ h2 {
   margin: 10px 50px 50px 50px;
 }
 
+.partnerList {
+  overflow-wrap: break-word;
+
+}
+
 .partnerList li {
   text-align: center;
   color: black;
   font-size: 20px;
   font-family: 'Segoe UI';
   line-height: 2;
+
+}
+
+.partnerList h2 {
+  padding-bottom: 0px;
 }
 
 
+.partner_img-wide {
+  max-height: 8rem;
+  max-width: 12rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
 .partner_img {
-  height: 100px;
-  width: 200px;
+  max-height: 6rem;
+  max-width: 12rem;
+  padding-bottom: 2rem;
 }
 
 /*Do we need to just link to the websites to each of these people or give brief information about them?*/
@@ -491,6 +522,7 @@ footer a,li{
 
   #slide1 {
     display: contents;
+    margin-top: 50px;
   }
 
 .slide-story {
@@ -513,7 +545,7 @@ footer a,li{
     width: auto;
     margin-top: -22px;
     padding: 20px;
-    color: darkgreen;
+    color: rgb(11, 34, 17);
     font-weight: bold;
     font-size: 24px;
     transition: 0.6s ease;
@@ -583,10 +615,85 @@ footer a,li{
 
   .roadmap {
     width: 100%;
-    max-width: 500px;
     height: auto;
   }
 
+
+  .contact-section {
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .contact-intro > * + * {
+    margin-top: 1rem;
+  }
+  
+  .contact-title {
+    line-height: 2.25rem;
+    font-weight: 700;
+  }
+  
+  .contact-description {
+    color: rgb(107 114 128);
+  }
+  
+  .form-group-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .form-input::placeholder,
+  .form-textarea:focus-visible {
+    color: #6b7280;
+  }
+  
+  .form-input:focus-visible,
+  .form-textarea:focus-visible {
+    outline: 2px solid rgb(11, 34, 17);
+    outline-offset: 2px;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+  }
+  
+  .form-submit {
+    width: 100%;
+    margin-top: 1.2rem;
+    background-color: rgb(11, 34, 17);
+    color: #fff;
+    padding: 13px 5px;
+    border-radius: 0.375rem;
+  }
+
+  .form-submit:hover {
+    background-color: darkgreen;
+  }
 
  
 
@@ -614,6 +721,10 @@ footer a,li{
     text-align: center;
       font-size: 10px;
   
+    }
+
+    #padding-bottom {
+      margin-bottom: -30px;
     }
   
   }
@@ -882,11 +993,13 @@ footer a,li{
     display: flex;
     width: 100%;
     flex-direction: row;
+    
   }
   
     .row {
       display: flex;
     }
+
   
     .column {
       float: left;
@@ -900,7 +1013,6 @@ footer a,li{
       float: right;
       width: 50%;
       display: inline-flexbox;
-      width: 50%;
     }
   
     footer a {
@@ -1029,4 +1141,22 @@ input[type=submit]:hover {
 .modules h2 {
   text-align: left;
   margin: 10px 50px 10px 50px;
+}
+
+.modules a {
+  margin-left: 10px;
+}
+
+#buttonsrow {
+  background-color: #f1bb0c;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  /* Multiple shadows create a sense of depth */
+  box-shadow: 
+    /* Subtle outer glow */
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    /* A stronger shadow on one side for directionality */
+    4px 4px 10px rgba(0, 0, 0, 0.3),
+    /* Optional: subtle inner shadow */
+    inset 0 0 5px rgba(255, 255, 255, 0.5)
 }
